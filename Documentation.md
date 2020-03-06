@@ -24,6 +24,6 @@ We will use ClodLab OpenStack to make instance of VM and specific Security group
 
 All related documentation will be added in our GitHub repository.
 
-![Diagramn](https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/6/28/0/FNK_Apple-Pie_s4x3.jpg.rend.hgtvcom.826.620.suffix/1382545039107.jpeg)
+![Diagramn](https://imgur.com/I2lcsvK)
 
 
