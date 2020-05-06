@@ -1,6 +1,6 @@
 <?php
-$host = "localhost";
-$db_name = "dev_to";
+$host = "localhost"; // add OpenStack's assigned floating IP
+$db_name = "formdb"; // sql database that was created
 $username = "root";
 $password = "password";
 $connection = null;
