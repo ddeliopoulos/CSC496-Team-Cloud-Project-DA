@@ -1,6 +1,6 @@
 # Installation and Deployment of Webserver/MySQL Form Fill Out Using OpenStack/CloudLab
 
-Group 8 Members: Dimitra Deliopoulos, Desislava Atanasova
+Group-8_Members: Dimitra Deliopoulos, Desislava Atanasova
 
 ## Project Description
 Accessible SQL form that can be filled out and submitted. The data is held in the backend SQL server that is already implemented. 
