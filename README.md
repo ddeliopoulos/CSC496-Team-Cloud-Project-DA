@@ -7,7 +7,7 @@ Accessible SQL form that can be filled out and submitted. The data is held in th
 The form was accessible through the browser. The IP address was: http://128.105.146.179/ (The experiment expired on CloudLab, we weren't gotten back to for an extension, we had it for over a month working properly). On the technical report, there will be clear directions on establishing the proper OpenStack environment and below are the details on installing Apache2 and MySQL.
 
 ## Installing Apache2
-This is installed under an instance created off of OpenStack hosted by Cloudlab using an ubuntu 18.04 server.
+This is installed under an instance created off of OpenStack hosted by Cloudlab using an ubuntu 18.04 server(information in Technical Report).
 
 ##### Update your local package index and install the apache2 package: 
  ```
@@ -25,14 +25,15 @@ This is installed under an instance created off of OpenStack hosted by Cloudlab 
  $ sudo systemctl status apache2
  ```
 ## Installing MySQL
-This is installed under an instance created off of OpenStack hosted by Cloudlab using an ubuntu 18.04 server.
+This is installed under an instance created off of OpenStack hosted by Cloudlab using an ubuntu 18.04 server(information in Technical Report).
 
 ##### Update your package index, install the mysql-server package, and then run the included security script:
+ ```
  $ sudo apt update
  $ sudo apt install mysql-server
  $ sudo mysql_secure_installation
- 
-#####  Adjusting User Authentication and Privileges:
+ ```
+#####  Adjusting User Authentication and Privileges and testing the server:
  ```
  $ sudo mysql
  mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
@@ -40,13 +41,10 @@ This is installed under an instance created off of OpenStack hosted by Cloudlab 
  mysql> FLUSH PRIVILEGES;
  mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
  mysql> exit
- ```
-  
-##### Testing the server:
- ```
  $ systemctl status mysql.service
  ```
-##### Create a database:
+
+##### Create a database and test to see if it works:
  ```
  $ sudo mysql
  mysql> create database formdb;
@@ -58,9 +56,6 @@ This is installed under an instance created off of OpenStack hosted by Cloudlab 
     message text,
     PRIMARY KEY (id)
  ); ]
- ```
-Test to see if works:
- ```
  mysql> describe test; 
  ```
 # Download Files
