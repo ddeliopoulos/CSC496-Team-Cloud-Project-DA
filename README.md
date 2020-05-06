@@ -2,7 +2,7 @@
 
 Members: Dimitra Deliopoulos, Desislava Atanasova
 
-## Project Achieved
+## Project Description
 Accessible SQL form that can be filled out and submitted. The data is held in the backend SQL server that is already implemented. 
 The form was accessible through the browser. The IP address was: http://128.105.146.179/ (The experiment expired on CloudLab, we weren't gotten back to for an extension, we had it for over a month working properly). On the technical report, there will be clear directions on establishing the proper OpenStack environment and below are the details on installing Apache2 and MySQL.
 
