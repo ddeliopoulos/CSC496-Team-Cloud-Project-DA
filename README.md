@@ -13,10 +13,6 @@ Desislava Atanasova
 Accessible SQL form that can be filled out and submitted. The data is held in the backend SQL server that is already implemented. 
 The form was accessible through the browser. The IP address was: http://128.105.146.179/ (The experiment expired on CloudLab, we weren't gotten back to for an extension, we had it for over a month working properly). On the technical report, there will be clear directions on establishing the proper OpenStack environment and below are the details on installing Apache2 and MySQL.
 
-# Description
-To provide working environment for the project, on Ubuntu 18.04 VM, Apache server and MySQL (server version 5.7.29) were installed. 
-On CloudLab, Openstack profile was created with a controller and two compute nodes. The network includes two routers, one is connected to the tun0-net , the other to to the flat-lan-l-net. The topology if the network connections is presented in Deliverable 3 - CSC 496-80 Course Project file "bionic-server-cloudimg-amd64" is used to create an image, the disk format is QCOW2. A few snapshots of the same image after installing the essential components to the server were created. One of this snapshots became our final project.
-
 # Installing Apache2
 This is installed under an instance created off of OpenStack hosted by Cloudlab using an ubuntu 18.04 server.
 
@@ -47,7 +43,6 @@ Update your package index, install the mysql-server package, and then run the in
  $ sudo apt install mysql-server
  $ sudo mysql_secure_installation
  
- 
 Adjusting User Authentication and Privileges:
  $ sudo mysql
  mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
@@ -60,25 +55,19 @@ Testing the server:
  $ systemctl status mysql.service
  
 Create a database:
-
  $ sudo mysql
- 
  mysql> create database formdb;
- 
  mysql> use formdb;
- 
  mysql> create table test(
     id int NOT NULL AUTO_INCREMENT,
     name varchar(255),
     email varchar(255),
     message text,
     PRIMARY KEY (id)
-); 
+); ]
 
 Test to see if works:
-
  mysql> describe test; 
- 
  
 # Deployment
 Start by adding the HTML file in the html directory
