@@ -47,6 +47,7 @@ Update your package index, install the mysql-server package, and then run the in
  $ sudo apt install mysql-server
  $ sudo mysql_secure_installation
  
+ 
 Adjusting User Authentication and Privileges:
  $ sudo mysql
  mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
@@ -59,6 +60,7 @@ Testing the server:
  $ systemctl status mysql.service
  
 Create a database:
+
  $ sudo mysql
  
  mysql> create database formdb;
@@ -71,9 +73,12 @@ Create a database:
     email varchar(255),
     message text,
     PRIMARY KEY (id)
-); ]
+); 
+
 Test to see if works:
+
  mysql> describe test; 
+ 
  
 # Deployment
 Start by adding the HTML file in the html directory
