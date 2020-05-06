@@ -23,8 +23,10 @@ This is installed under an instance created off of OpenStack hosted by Cloudlab 
 
 Update your local package index: 
  $ sudo apt update
+ 
 Install the apache2 package: 
  $ sudo apt install apache2
+ 
 Check the available ufw application profiles:
  $ sudo ufw app list
 
@@ -37,10 +39,13 @@ Available applications:
   
 Permitting traffic on port 80 (normal, unencrypted web traffic):
  $ sudo ufw allow 'Apache'
+ 
 Verify the change:
  $ sudo ufw status
+ 
 Check server status:
  $ sudo systemctl status apache2
+ 
 
 # Installing MySQL
 This is installed under an instance created off of OpenStack hosted by Cloudlab using an ubuntu 18.04 server.
@@ -53,7 +58,7 @@ Update your package index, install the mysql-server package, and then run the in
 Adjusting User Authentication and Privileges:
  $ sudo mysql
  mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
- mysqlALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+ mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
  mysql> FLUSH PRIVILEGES;
  mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
  mysql> exit
