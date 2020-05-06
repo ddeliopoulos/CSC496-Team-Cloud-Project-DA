@@ -1,10 +1,13 @@
-# Group 8 - Installation and Deployment of Webserver/mySQL Form Fill Out
+# Group 8 - Installation and Deployment of Webserver/mySQL Form Fill Out using OpenStack/CloudLab
 
 Group members: Dimitra Deliopoulos, Desislava Atanasova
 
 ## Project Achieved
 Accessible SQL form that can be filled out and submitted. The data is held in the backend SQL server that is already implemented. 
 The form was accessible through the browser. The IP address was: http://128.105.146.179/ (The experiment expired on CloudLab, we weren't gotten back to for an extension, we had it for over a month working properly). On the technical report, there will be clear directions on establishing the proper OpenStack environment and below are the details on installing Apache2 and MySQL.
+
+## Establishing Openstack Environment
+To acheive the same OpenStack environment as the project, a Technical Report has been added to the CSC496-Team-Cloud-Project-DA directory that shows in great detail the process done through OpenStaack and CloudLab, including all the network aspects of this project so it could successfully deploy through a working non-local ip. Please reference
 
 ## Installing Apache2
 This is installed under an instance created off of OpenStack hosted by Cloudlab using an ubuntu 18.04 server(information in Technical Report).
@@ -59,8 +62,6 @@ This is installed under an instance created off of OpenStack hosted by Cloudlab 
  mysql> describe test; 
  ```
 # Download Files
-Start by adding the HTML file in the html directory
+Add the HTML  and PHP file in the html directory
  /var/www/html/"form.html"
- 
-Add the php file
  /var/www/html/"form_submit.php"
