@@ -1,5 +1,4 @@
-# Documentation describing the selected computing service, including network diagram and
-# specific details on what services being installed on which VM.
+# Documentation describing the selected computing service, including network diagram and specific details on what services being installed on which VM.
 
 The selected computing service for our project is PaaS. Platform as a service (PaaS) is a cloud computing model 
 allowing developers to build and deliver applications over the internet without bothering about the complexity 
