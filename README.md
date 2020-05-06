@@ -6,7 +6,6 @@ CSC 496-80 Course Project - Installation and Deployment of a webserver with back
  
 
 Dimitra Deliopoulos
-
 Desislava Atanasova
 
 
@@ -16,8 +15,7 @@ The form was accessible through the browser. The IP address was: http://128.105.
 
 # Description
 To provide working environment for the project, on Ubuntu 18.04 VM, Apache server and MySQL (server version 5.7.29) were installed. 
-On CloudLab, Openstack profile was created with a controller and two compute nodes. The network includes two routers, one is connected to the tun0-net , the other to to the flat-lan-l-net. The topology if the network connections is presented in Deliverable 3 - CSC 496-80 Course Project file.
-"bionic-server-cloudimg-amd64" is used to create an image, the disk format is QCOW2. A few snapshots of the same image after installing the essential components to the server were created. One of this snapshots became our final project.
+On CloudLab, Openstack profile was created with a controller and two compute nodes. The network includes two routers, one is connected to the tun0-net , the other to to the flat-lan-l-net. The topology if the network connections is presented in Deliverable 3 - CSC 496-80 Course Project file "bionic-server-cloudimg-amd64" is used to create an image, the disk format is QCOW2. A few snapshots of the same image after installing the essential components to the server were created. One of this snapshots became our final project.
 
 # Installing Apache2
 This is installed under an instance created off of OpenStack hosted by Cloudlab using an ubuntu 18.04 server.
@@ -30,15 +28,8 @@ Install the apache2 package:
  
 Check the available ufw application profiles:
  $ sudo ufw app list
-
-Output:
-Available applications:
-  Apache
-  Apache Full
-  Apache Secure
-  OpenSSH
   
-Permitting traffic on port 80 (normal, unencrypted web traffic):
+Permit traffic on port 80 (normal, unencrypted web traffic):
  $ sudo ufw allow 'Apache'
  
 Verify the change:
@@ -52,25 +43,16 @@ Check server status:
 This is installed under an instance created off of OpenStack hosted by Cloudlab using an ubuntu 18.04 server.
 
 Update your package index, install the mysql-server package, and then run the included security script:
-
  $ sudo apt update
- 
  $ sudo apt install mysql-server
- 
  $ sudo mysql_secure_installation
  
 Adjusting User Authentication and Privileges:
-
  $ sudo mysql
- 
  mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
- 
  mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
- 
  mysql> FLUSH PRIVILEGES;
- 
  mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
- 
  mysql> exit
   
 Testing the server:
@@ -89,14 +71,14 @@ Create a database:
     email varchar(255),
     message text,
     PRIMARY KEY (id)
-); 
-
+); ]
 Test to see if works:
  mysql> describe test; 
  
 # Deployment
 Start by adding the HTML file in the html directory
  /var/www/html/"form.html"
+ 
 Add the php file
  /var/www/html/"form_submit.php"
  
