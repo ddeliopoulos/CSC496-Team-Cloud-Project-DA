@@ -41,7 +41,7 @@ Verify the change:
  $ sudo ufw status
 Check server status:
  $ sudo systemctl status apache2
- 
+
 # Installing MySQL
 This is installed under an instance created off of OpenStack hosted by Cloudlab using an ubuntu 18.04 server.
 
@@ -50,14 +50,36 @@ Update your package index, install the mysql-server package, and then run the in
  $ sudo apt install mysql-server
  $ sudo mysql_secure_installation
  
- Adjusting User Authentication and Privileges:
-  $ sudo mysql
-  mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
-  mysqlALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-  mysql> FLUSH PRIVILEGES;
-  mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
-  mysql> exit
+Adjusting User Authentication and Privileges:
+ $ sudo mysql
+ mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
+ mysqlALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+ mysql> FLUSH PRIVILEGES;
+ mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
+ mysql> exit
   
-  Testing the server:
-   $ systemctl status mysql.service
-   
+Testing the server:
+ $ systemctl status mysql.service
+ 
+Create a database:
+ $ sudo mysql
+ mysql> create database formdb;
+ mysql> use formdb;
+ mysql> create table test(
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255),
+    email varchar(255),
+    message text,
+    PRIMARY KEY (id)
+); ]
+Test to see if works:
+ mysql> describe test; 
+ 
+# Deployment
+Start by adding the HTML file in the html directory
+ /var/www/html/"form.html"
+Add the php file
+ /var/www/html/"form_submit.php"
+ 
+ 
+ 
