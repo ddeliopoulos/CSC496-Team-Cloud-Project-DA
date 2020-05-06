@@ -20,7 +20,7 @@ computers to connect to a specific computer or service, from one address and por
 
 We will use ClodLab and OpenStack to make instance of an image and specify Security groups.
 
-All related documentation will be added in our GitHub repository.
+All related documentation will be added in our GitHub repository. Tomcat was replaced with Apache2 in the picture below.
 
 ![Diagramn](https://i.imgur.com/I2lcsvK.png)
 
