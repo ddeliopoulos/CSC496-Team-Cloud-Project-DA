@@ -9,7 +9,7 @@ The form was accessible through the browser. The IP address was: http://128.105.
 ## Establishing Openstack Environment
 To acheive the same OpenStack environment as the project, a Technical Report has been added to the CSC496-Team-Cloud-Project-DA directory that shows in great detail the process done through OpenStaack and CloudLab, including all the network aspects of this project so it could successfully deploy through a working non-local ip. Please reference
 
-Link to Technical Report: [Technical Report] (www.google.com)
+Link to Technical Report: [a link](https://github.com/user/repo/blob/branch/other_file.md)
 
 ## Installing Apache2
 This is installed under an instance created off of OpenStack hosted by Cloudlab using an ubuntu 18.04 server(information in Technical Report).
