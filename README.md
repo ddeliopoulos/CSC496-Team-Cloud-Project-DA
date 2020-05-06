@@ -6,6 +6,7 @@ CSC 496-80 Course Project - Installation and Deployment of a webserver with back
  
 
 Dimitra Deliopoulos
+
 Desislava Atanasova
 
 
@@ -51,16 +52,25 @@ Check server status:
 This is installed under an instance created off of OpenStack hosted by Cloudlab using an ubuntu 18.04 server.
 
 Update your package index, install the mysql-server package, and then run the included security script:
+
  $ sudo apt update
+ 
  $ sudo apt install mysql-server
+ 
  $ sudo mysql_secure_installation
  
 Adjusting User Authentication and Privileges:
+
  $ sudo mysql
+ 
  mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
+ 
  mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+ 
  mysql> FLUSH PRIVILEGES;
+ 
  mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
+ 
  mysql> exit
   
 Testing the server:
@@ -68,15 +78,19 @@ Testing the server:
  
 Create a database:
  $ sudo mysql
+ 
  mysql> create database formdb;
+ 
  mysql> use formdb;
+ 
  mysql> create table test(
     id int NOT NULL AUTO_INCREMENT,
     name varchar(255),
     email varchar(255),
     message text,
     PRIMARY KEY (id)
-); ]
+); 
+
 Test to see if works:
  mysql> describe test; 
  
