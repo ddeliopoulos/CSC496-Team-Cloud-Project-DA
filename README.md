@@ -1,13 +1,6 @@
-# CSC496-Team Cloud Project-DA
+# Group 8 - Installation and Deployment of Webserver/mySQL Form Fill Out
 
-Webserver/mySQL Form Fill Out
-
-CSC 496-80 Course Project - Installation and Deployment of a webserver with backend mySQL server
- 
-
-Dimitra Deliopoulos
-Desislava Atanasova
-
+Group members: Dimitra Deliopoulos, Desislava Atanasova
 
 ## Project Achieved
 Accessible SQL form that can be filled out and submitted. The data is held in the backend SQL server that is already implemented. 
@@ -16,28 +9,19 @@ The form was accessible through the browser. The IP address was: http://128.105.
 ## Installing Apache2
 This is installed under an instance created off of OpenStack hosted by Cloudlab using an ubuntu 18.04 server.
 
-##### Update your local package index: 
+##### Update your local package index and install the apache2 package: 
  ```
  $ sudo apt update
- ```
-##### Install the apache2 package:
- ```
  $ sudo apt install apache2
  ```
-##### Check the available ufw application profiles:
+##### Check the available ufw application profiles and permit traffic on port 80:
  ```
  $ sudo ufw app list
- ```
-##### Permit traffic on port 80 (normal, unencrypted web traffic):
- ```
  $ sudo ufw allow 'Apache'
  ```
-##### Verify the change:
+##### Verify the change and check server status::
  ```
  $ sudo ufw status
- ```
-##### Check server status:
- ```
  $ sudo systemctl status apache2
  ```
 ## Installing MySQL
@@ -85,6 +69,3 @@ Start by adding the HTML file in the html directory
  
 Add the php file
  /var/www/html/"form_submit.php"
- 
- 
- 
