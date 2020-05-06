@@ -30,13 +30,13 @@ This is installed under an instance created off of OpenStack hosted by Cloudlab 
 ## Installing MySQL
 This is installed under an instance created off of OpenStack hosted by Cloudlab using an ubuntu 18.04 server(information in Technical Report).
 
-##### Update your package index, install the mysql-server package, and then run the included security script:
+##### Update the package index, install the mysql-server package, and then run the included security script:
  ```
  $ sudo apt update
  $ sudo apt install mysql-server
  $ sudo mysql_secure_installation
  ```
-#####  Adjusting User Authentication and Privileges and testing the server:
+##### Adjusting user authentication/privileges and testing the server:
  ```
  $ sudo mysql
  mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
@@ -46,7 +46,6 @@ This is installed under an instance created off of OpenStack hosted by Cloudlab 
  mysql> exit
  $ systemctl status mysql.service
  ```
-
 ##### Create a database and test to see if it works:
  ```
  $ sudo mysql
@@ -62,7 +61,7 @@ This is installed under an instance created off of OpenStack hosted by Cloudlab 
  mysql> describe test; 
  ```
 # Download Files
-Add the HTML  and PHP file in the html directory
+Add the HTML and PHP files into the html directory
 
  /var/www/html/"form.html"
  
