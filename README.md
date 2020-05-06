@@ -1,4 +1,4 @@
-# Installation and Deployment of Webserver/mySQL Form Fill Out using OpenStack/CloudLab
+# Installation and Deployment of Webserver/MySQL Form Fill Out Using OpenStack/CloudLab
 
 Group 8 Members: Dimitra Deliopoulos, Desislava Atanasova
 
