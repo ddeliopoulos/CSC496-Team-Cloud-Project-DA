@@ -59,7 +59,7 @@ This is installed under an instance created off of OpenStack hosted by Cloudlab 
     email varchar(255),
     message text,
     PRIMARY KEY (id)
- ); ]
+ );
  mysql> describe test; 
  ```
 # Download Files
