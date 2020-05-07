@@ -62,7 +62,7 @@ This is installed under an instance created off of OpenStack hosted by Cloudlab 
  );
  mysql> describe test; 
  ```
-# Download Files
+# Downloadable Files
 Add the HTML and PHP files into the html directory
 
  /var/www/html/"form.html"
